@@ -9,6 +9,7 @@ and equipping items.
 from textual.screen import Screen
 from textual.widgets import Header, Footer, Static, Button
 from textual.containers import Vertical, Horizontal
+from textual.app import ComposeResult
 
 # from core.game_controller import GameController
 
@@ -17,7 +18,7 @@ class HeroScreen(Screen):
     The screen for managing the player's 5-hero team.
     """
     
-    def compose(self) -> "ComposeResult":
+    def compose(self) -> ComposeResult:
         """
         Create the child widgets for the hero screen.
         """

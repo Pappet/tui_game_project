@@ -203,7 +203,291 @@ Der `GameController` und der `GameState` wurden erfolgreich instanziiert und in 
 
 =============================================================================================================================================================================================
 
+Hallo, hier ist der BUILDER.
 
+Meine Aufgabe ist es, die Navigationslogik im `MainMenuScreen` zu implementieren, um die (Dev)-Buttons mit den entsprechenden Bildschirmen zu verbinden und den Quit-Button funktionsfähig zu machen.
+
+REWRITE: `tui_game/tui/screens/main_menu.py`
+
+```python
+"""
+main_menu.py
+
+Implements the Textual Screen for the main menu.
+This is the initial screen the player sees, providing options
+to start, load, or quit the game.
+"""
+
+from textual.screen import Screen
+from textual.widgets import Header, Footer, Static, Button
+from textual.containers import Vertical
+
+# Import other screens to switch to
+from tui.screens.hero_screen import HeroScreen
+from tui.screens.base_screen import BaseScreen
+from tui.screens.battle_screen import BattleScreen
+
+class MainMenuScreen(Screen):
+    """
+    The main menu and starting screen for the game.
+    """
+
+    def compose(self) -> "ComposeResult":
+        """
+         Create the child widgets for the main menu.
+        """
+        yield Header(name="Main Menu")
+
+        with Vertical(id="menu_options"):
+            yield Static("TUI RPG GAME (Title Stub)", id="title")
+            yield Button("Start New Game", id="btn_new_game")
+            yield Button("Load Game", id="btn_load_game")
+
+            # --- Quick navigation buttons for development ---
+            yield Button("Go to Base (Dev)", id="btn_goto_base")
+            yield Button("Go to Heroes (Dev)", id="btn_goto_heroes")
+            yield Button("Go to Battle (Dev)", id="btn_goto_battle")
+            # --- End Dev Buttons ---
+
+            yield Button("Quit", id="btn_quit")
+
+        yield Footer()
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """
+        Handle button press events on the main menu.
+        """
+        if event.button.id == "btn_new_game":
+            print("Stub: 'New Game' pressed.")
+            # Future: Call controller to initialize a new game state
+            # self.app.controller.new_game()
+            # self.app.push_screen(BaseScreen()) # e.g., go to base
+
+        elif event.button.id == "btn_load_game":
+            print("Stub: 'Load Game' pressed.")
+            # Future: Call controller to load game state
+            # self.app.controller.load_game()
+            # self.app.push_screen(BaseScreen()) # e.g., go to base
+
+        elif event.button.id == "btn_goto_base":
+            # print("Stub: 'Go to Base' pressed.")
+            self.app.push_screen(BaseScreen())
+
+        elif event.button.id == "btn_goto_heroes":
+            # print("Stub: 'Go to Heroes' pressed.")
+            self.app.push_screen(HeroScreen())
+
+        elif event.button.id == "btn_goto_battle":
+             # print("Stub: 'Go to Battle' pressed.")
+             self.app.push_screen(BattleScreen())
+
+        elif event.button.id == "btn_quit":
+            # print("Stub: 'Quit' pressed.")
+            self.app.exit()
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Die Importe für `BaseScreen`, `HeroScreen` und `BattleScreen` wurden hinzugefügt. Die Methode `on_button_pressed` implementiert jetzt die Navigation zu diesen Bildschirmen mit `self.app.push_screen()` für die entsprechenden Button-IDs (`btn_goto_base`, `btn_goto_heroes`, `btn_goto_battle`). Der `btn_quit`-Handler ruft korrekt `self.app.exit()` auf. Die alten `print`-Stubs für diese Buttons wurden entfernt/auskommentiert.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, folgt PEP8. Kommentare sind auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/main_menu.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.5",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "META",
+    "task": "The main menu navigation is now implemented. Review the changes and define the next step, possibly implementing basic functionality within one of the other screens (e.g., loading/saving in main menu, or displaying initial state in base/hero screen)."
+  }
+}
+```
 
 =============================================================================================================================================================================================
 

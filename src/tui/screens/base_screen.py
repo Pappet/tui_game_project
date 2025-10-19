@@ -9,6 +9,7 @@ with upgrades.
 from textual.screen import Screen
 from textual.widgets import Header, Footer, Static, Button
 from textual.containers import VerticalScroll
+from textual.app import ComposeResult
 
 # from core.game_controller import GameController
 
@@ -17,7 +18,7 @@ class BaseScreen(Screen):
     The screen for managing the player's base.
     """
     
-    def compose(self) -> "ComposeResult":
+    def compose(self) -> ComposeResult:
         """
         Create the child widgets for the base screen.
         """
