@@ -1,10 +1,537 @@
 =============================================================================================================================================================================================
 
+## 🧭 NEXT STEP
 
+  - **Role:** BUILDER
+  - **Task:** Implementiere die Logik für `new_game` in `game_controller.py`.
+    1.  Modifiziere `tui_game/core/game_controller.py`: Implementiere die `new_game`-Methode, um den `GameState` mit Startwerten zu initialisieren (z.B. Erstelle 1-2 Starthhelden in `self.game_state.heroes`, füge Startgegenstände zu `self.game_state.inventory` hinzu und setze initiale `self.game_state.base_status`-Werte).
+
+-----
+
+## 📊 PROJECT PROGRESS
+
+Die grundlegende Lade- und Speicherlogik wurde in `game_state.py` implementiert und genehmigt. Der nächste Schritt besteht darin, die Funktionalität für das Starten eines neuen Spiels im `GameController` zu implementieren, indem der initiale Spielzustand bevölkert wird.
+
+-----
+
+## 🧱 CONSOLIDATED PROJECT STATE
+
+```json
+{
+  "version": "v0.8",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Implement the `new_game` logic in `game_controller.py`. 1. Modify `tui_game/core/game_controller.py`: Implement the `new_game` method to initialize the `GameState` with starting values (e.g., create 1-2 starting heroes in `self.game_state.heroes`, add starting items to `self.game_state.inventory`, set initial `self.game_state.base_status`)."
+  }
+}
+```
 
 =============================================================================================================================================================================================
 
+Hallo, hier ist der BUILDER.
 
+Meine Aufgabe ist es, die `new_game`-Logik im `GameController` zu implementieren, um einen neuen Spielzustand mit Startwerten zu initialisieren.
+
+REWRITE: `tui_game/core/game_controller.py`
+
+```python
+"""
+game_controller.py
+
+The main "conductor" of the game.
+Manages game state transitions and coordinates between the TUI
+and the game logic modules.
+"""
+
+from core.game_state import GameState
+# from game_logic import hero_manager, item_manager, battle_system, base_manager
+from typing import Any # Using 'Any' for stubs
+
+class GameController:
+    """
+    Manages the game's core state and logic flow.
+    """
+    def __init__(self):
+        # The game_state will hold all persistent data (heroes, inventory, base)
+        self.game_state: GameState = GameState()
+
+        # The controller will also manage the current high-level game state
+        # e.g., "MAIN_MENU", "BATTLE", "BASE_MANAGEMENT"
+        self.current_screen: str = "MAIN_MENU"
+
+        print("GameController initialized.")
+
+    def new_game(self):
+        """
+        Initializes a new game state with starting values.
+        (Called from MainMenuScreen)
+        """
+        print("Initializing new game state...")
+        # 1. Create a fresh GameState object
+        self.game_state = GameState()
+
+        # 2. Add starting heroes (example structure)
+        # In a real implementation, load archetypes from heroes.json
+        self.game_state.heroes.append({
+            "id": "hero_0",
+            "name": "Warrior Hero",
+            "class": "warrior",
+            "level": 1,
+            "current_xp": 0,
+            "base_stats": {"hp": 120, "attack": 12, "defense": 8},
+            "equipment": {}, # e.g., {"weapon": "sword_basic"}
+            "is_active": True
+        })
+        self.game_state.heroes.append({
+            "id": "hero_1",
+            "name": "Mage Hero",
+            "class": "mage",
+            "level": 1,
+            "current_xp": 0,
+            "base_stats": {"hp": 80, "attack": 5, "defense": 3},
+            "equipment": {},
+            "is_active": True
+        })
+        # Add up to 5 heroes as needed
+
+        # 3. Add starting items
+        self.game_state.inventory["health_potion"] = 3
+        self.game_state.inventory["sword_basic"] = 1 # Example starting item
+
+        # 4. Set initial base status
+        self.game_state.base_status["barracks"] = 0
+        self.game_state.base_status["forge"] = 0
+
+        print("New game state initialized with starting heroes, items, and base status.")
+
+
+    def load_game(self):
+        """
+        Loads the game state from a file.
+        (Responsibility is in game_state.py, but controller triggers it)
+        """
+        # Re-initialize GameState before loading to clear any old data
+        self.game_state = GameState()
+        self.game_state.load_state() # load_state handles FileNotFoundError etc.
+        print("Controller triggered game load.")
+
+
+    def save_game(self):
+        """
+        Saves the current game state to a file.
+        (Responsibility is in game_state.py, but controller triggers it)
+        """
+        self.game_state.save_state()
+        print("Controller triggered game save.")
+
+    def switch_screen(self, new_screen: str):
+        """
+        Handles the logic for switching between major UI screens.
+        (e.g., from 'BASE' to 'BATTLE')
+        """
+        # Future: Add logic here if needed before/after screen switch
+        self.current_screen = new_screen
+        print(f"Stub: Switching screen to {new_screen}")
+        # Actual screen switching is handled by TUI app's push_screen/pop_screen
+
+    def equip_item(self, hero_id: Any, item_id: Any):
+        """
+        Coordinates the logic for equipping an item to a hero.
+        (Based on architecture.md data flow example)
+        """
+        print(f"Controller: Attempting to equip item {item_id} on hero {hero_id}...")
+        # --- Future Logic ---
+        # 1. Get game_state
+        state = self.game_state
+        # 2. Call logic module (Placeholder - item_manager not imported yet)
+        # success = item_manager.apply_item(state, hero_id, item_id)
+        success = True # Stub
+        # 3. Handle result
+        if success:
+            print(f"Controller: Item {item_id} equipped on hero {hero_id}.")
+        else:
+            print(f"Controller: Failed to equip item {item_id} on hero {hero_id}.")
+        # 4. (TUI will be notified via event or state watch - handled by Textual)
+        pass
+
+# This file defines the class. It won't be run directly.
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Die `new_game`-Methode initialisiert jetzt den `game_state`, indem sie eine neue `GameState`-Instanz erstellt. Sie fügt beispielhaft zwei Helden zur `heroes`-Liste hinzu, legt Startgegenstände im `inventory` an und setzt den anfänglichen `base_status`. Die Struktur der Heldendaten orientiert sich lose an `heroes.json`. Die `load_game`- und `save_game`-Methoden wurden leicht angepasst, um klarzustellen, dass sie die Aktionen nur auslösen. Der Platzhalter-Print in `new_game` wurde durch tatsächliche Logik ersetzt.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, folgt PEP8. Kommentare und Docstrings sind auf Englisch und erklären die Schritte.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/core/game_controller.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.8",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "META",
+    "task": "The `new_game` logic in `game_controller.py` is now implemented to populate the initial game state. Review the changes and define the next implementation step, perhaps displaying the initial base status in `BaseScreen`."
+  }
+}
+```
 
 =============================================================================================================================================================================================
 
