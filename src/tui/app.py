@@ -8,14 +8,14 @@ the different screens.
 
 from textual.app import App, ComposeResult
 
-# Import screens (once they are created)
-# from tui.screens.main_menu import MainMenuScreen
+# Import screens
+from tui.screens.main_menu import MainMenuScreen
 # from tui.screens.hero_screen import HeroScreen
 # from tui.screens.base_screen import BaseScreen
 # from tui.screens.battle_screen import BattleScreen
 
 # Import the core logic
-# from core.game_controller import GameController
+from core.game_controller import GameController
 
 class GameApp(App):
     """
@@ -26,8 +26,8 @@ class GameApp(App):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # self.controller = GameController() # Initialize the game controller
-        print("GameApp initialized (stub).")
+        self.controller = GameController() # Initialize the game controller
+        # print("GameApp initialized (stub).")
 
     def compose(self) -> ComposeResult:
         """
@@ -35,7 +35,7 @@ class GameApp(App):
         Initially, it might be empty as we push screens dynamically.
         """
         # We could yield global Header/Footer here
-        print("GameApp compose() called (stub).")
+        # print("GameApp compose() called (stub).")
         yield from [] # Yield nothing for now
 
     def on_mount(self) -> None:
@@ -43,8 +43,8 @@ class GameApp(App):
         Called by Textual when the app is first mounted.
         This is the correct place to push the initial screen.
         """
-        # self.push_screen(MainMenuScreen())
-        print("Stub: App mounted. Pushing initial screen (e.g., MainMenuScreen).")
+        self.push_screen(MainMenuScreen())
+        # print("Stub: App mounted. Pushing initial screen (e.g., MainMenuScreen).")
 
 # This file is not run directly.
 # It is imported by main.py which then calls .run()

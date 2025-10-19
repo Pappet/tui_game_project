@@ -7,7 +7,7 @@ and the game logic modules.
 """
 
 # Import necessary modules (once they are created)
-# from core.game_state import GameState
+from core.game_state import GameState
 # from game_logic import hero_manager, item_manager, battle_system, base_manager
 from typing import Any # Using 'Any' for stubs
 
@@ -17,28 +17,28 @@ class GameController:
     """
     def __init__(self):
         # The game_state will hold all persistent data (heroes, inventory, base)
-        # self.game_state: GameState = GameState()
-        self.game_state: Any = None # Placeholder
+        self.game_state: GameState = GameState()
+        # self.game_state: Any = None # Placeholder
         
         # The controller will also manage the current high-level game state
         # e.g., "MAIN_MENU", "BATTLE", "BASE_MANAGEMENT"
         self.current_screen: str = "MAIN_MENU"
         
-        print("GameController initialized (stub).")
+        print("GameController initialized.")
 
     def load_game(self):
         """
         Loads the game state from a file.
         (Responsibility might be in game_state.py, but controller triggers it)
         """
-        # self.game_state.load()
+        self.game_state.load_state()
         print("Stub: Loading game state...")
 
     def save_game(self):
         """
         Saves the current game state to a file.
         """
-        # self.game_state.save()
+        self.game_state.save_state()
         print("Stub: Saving game state...")
 
     def switch_screen(self, new_screen: str):
@@ -57,7 +57,7 @@ class GameController:
         print(f"Stub: Attempting to equip item {item_id} on hero {hero_id}...")
         # --- Future Logic ---
         # 1. Get game_state
-        # state = self.game_state
+        state = self.game_state
         # 2. Call logic module
         # success = item_manager.apply_item(state, hero_id, item_id)
         # 3. Handle result

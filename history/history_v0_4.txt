@@ -1,0 +1,848 @@
+=============================================================================================================================================================================================
+
+## 🧭 NEXT STEP
+
+  - **Role:** BUILDER
+  - **Task:** Initialisiere den `GameController` und `GameState`.
+    1.  Modifiziere `tui_game/core/game_controller.py`: Importiere `GameState` aus `core.game_state` und erstelle in der `__init__`-Methode eine Instanz davon (ersetze `self.game_state: Any = None`).
+    2.  Modifiziere `tui_game/tui/app.py`: Importiere den `GameController` aus `core.game_controller` und erstelle in der `__init__`-Methode eine Instanz davon (z.B. `self.controller = GameController()`).
+
+-----
+
+## 📊 PROJECT PROGRESS
+
+Der BUILDER hat den Einstiegspunkt der Anwendung (`main.py`) und die Haupt-App-Klasse (`tui/app.py`) implementiert, wodurch die TUI jetzt den `MainMenuScreen` laden kann. Die Änderungen wurden genehmigt. Der nächste Schritt besteht darin, die Kernkomponenten (`GameController` und `GameState`) miteinander zu verbinden und sie für die TUI-App verfügbar zu machen.
+
+-----
+
+## 🧱 CONSOLIDATED PROJECT STATE
+
+```json
+{
+  "version": "v0.4",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Initialize the GameController and GameState. 1. Modify `tui_game/core/game_controller.py`: Import `GameState` from `core.game_state` and instantiate it in `__init__`. 2. Modify `tui_game/tui/app.py`: Import `GameController` from `core.game_controller` and instantiate it in `__init__`."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Meine Aufgabe ist es, den `GameController` und `GameState` zu initialisieren. Dies ist eine zweiteilige Aufgabe. Ich beginne mit dem ersten Teil: der Modifizierung von `tui_game/core/game_controller.py`, um den `GameState` zu importieren und zu instanziieren.
+
+UPDATE: `tui_game/core/game_controller.py`
+
+```python
+"""
+game_controller.py
+
+The main "conductor" of the game.
+Manages game state transitions and coordinates between the TUI 
+and the game logic modules.
+"""
+
+# Import necessary modules (once they are created)
+from core.game_state import GameState
+# from game_logic import hero_manager, item_manager, battle_system, base_manager
+from typing import Any # Using 'Any' for stubs
+
+class GameController:
+    """
+    Manages the game's core state and logic flow.
+    """
+    def __init__(self):
+        # The game_state will hold all persistent data (heroes, inventory, base)
+        self.game_state: GameState = GameState()
+        # self.game_state: Any = None # Placeholder
+        
+        # The controller will also manage the current high-level game state
+        # e.g., "MAIN_MENU", "BATTLE", "BASE_MANAGEMENT"
+        self.current_screen: str = "MAIN_MENU"
+        
+        print("GameController initialized.")
+
+    def load_game(self):
+        """
+        Loads the game state from a file.
+        (Responsibility might be in game_state.py, but controller triggers it)
+        """
+        self.game_state.load_state()
+        print("Stub: Loading game state...")
+
+    def save_game(self):
+        """
+        Saves the current game state to a file.
+        """
+        self.game_state.save_state()
+        print("Stub: Saving game state...")
+
+    def switch_screen(self, new_screen: str):
+        """
+        Handles the logic for switching between major UI screens.
+        (e.g., from 'BASE' to 'BATTLE')
+        """
+        self.current_screen = new_screen
+        print(f"Stub: Switching screen to {new_screen}")
+
+    def equip_item(self, hero_id: Any, item_id: Any):
+        """
+        Coordinates the logic for equipping an item to a hero.
+        (Based on architecture.md data flow example)
+        """
+        print(f"Stub: Attempting to equip item {item_id} on hero {hero_id}...")
+        # --- Future Logic ---
+        # 1. Get game_state
+        state = self.game_state
+        # 2. Call logic module
+        # success = item_manager.apply_item(state, hero_id, item_id)
+        # 3. Handle result
+        # if success:
+        #     print("Item equipped.")
+        # else:
+        #     print("Failed to equip item.")
+        # 4. (TUI will be notified via event or state watch)
+        pass
+
+# This file defines the class. It won't be run directly.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 `GameState` wird jetzt aus `core.game_state` importiert. In `__init__` wird `self.game_state` korrekt als Instanz von `GameState` initialisiert und ersetzt den `Any`-Platzhalter. Die `load_game`- und `save_game`-Stubs wurden ebenfalls aktualisiert, um die (zukünftigen) Methoden des `game_state`-Objekts aufzurufen.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, folgt PEP8. Kommentare sind auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/core/game_controller.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.4",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Initialize the GameController (Part 2): Modify `tui_game/tui/app.py`: Import `GameController` from `core.game_controller` and instantiate it in `__init__`."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich fahre mit dem zweiten Teil der Aufgabe fort: der Modifizierung von `tui_game/tui/app.py`, um den `GameController` zu importieren und zu instanziieren.
+
+Ich habe bemerkt, dass die bereitgestellte `app.py`-Datei der ursprüngliche Stub war. Ich werde sie so aktualisieren, dass sie sowohl die vorherige Änderung (Laden des `MainMenuScreen`) als auch die neue Anforderung (Initialisieren des `GameController`) enthält.
+
+REWRITE: `tui_game/tui/app.py`
+
+```python
+"""
+app.py
+
+The main Textual App class for the TUI game.
+This class is the entry point for the Textual framework and manages
+the different screens.
+"""
+
+from textual.app import App, ComposeResult
+
+# Import screens
+from tui.screens.main_menu import MainMenuScreen
+# from tui.screens.hero_screen import HeroScreen
+# from tui.screens.base_screen import BaseScreen
+# from tui.screens.battle_screen import BattleScreen
+
+# Import the core logic
+from core.game_controller import GameController
+
+class GameApp(App):
+    """
+    The main TUI application class.
+    """
+
+    # CSS_PATH = "main.tcss" # Future styling
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.controller = GameController() # Initialize the game controller
+        # print("GameApp initialized (stub).")
+
+    def compose(self) -> ComposeResult:
+        """
+        Called by Textual to create the initial widget tree.
+        Initially, it might be empty as we push screens dynamically.
+        """
+        # We could yield global Header/Footer here
+        # print("GameApp compose() called (stub).")
+        yield from [] # Yield nothing for now
+
+    def on_mount(self) -> None:
+        """
+        Called by Textual when the app is first mounted.
+        This is the correct place to push the initial screen.
+        """
+        self.push_screen(MainMenuScreen())
+        # print("Stub: App mounted. Pushing initial screen (e.g., MainMenuScreen).")
+
+# This file is not run directly.
+# It is imported by main.py which then calls .run()
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 `GameController` wird jetzt aus `core.game_controller` importiert. In `__init__` wird `self.controller` korrekt als Instanz von `GameController` initialisiert. Die Logik aus dem vorherigen Schritt (Import und Push von `MainMenuScreen`) wurde beibehalten. Stub-Prints wurden entfernt.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, folgt PEP8. Kommentare sind auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/app.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.4",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "final",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "in_progress",
+      "last_agent": "BUILDER",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "META",
+    "task": "GameController and GameState are now instantiated and wired into the TUI App. Review the changes and define the next implementation step, possibly linking the TUI screens to the controller."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
+
+
+
+=============================================================================================================================================================================================
