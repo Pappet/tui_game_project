@@ -2,7 +2,7 @@
 game_controller.py
 
 The main "conductor" of the game.
-Manages game state transitions and coordinates between the TUI 
+Manages game state transitions and coordinates between the TUI
 and the game logic modules.
 """
 
@@ -19,18 +19,36 @@ class GameController:
         # The game_state will hold all persistent data (heroes, inventory, base)
         self.game_state: GameState = GameState()
         # self.game_state: Any = None # Placeholder
-        
+
         # The controller will also manage the current high-level game state
         # e.g., "MAIN_MENU", "BATTLE", "BASE_MANAGEMENT"
         self.current_screen: str = "MAIN_MENU"
-        
+
         print("GameController initialized.")
+
+    def new_game(self):
+        """
+        Initializes a new game state.
+        (Called from MainMenuScreen)
+        """
+        # --- Future Logic ---
+        # 1. Create a fresh GameState object
+        # self.game_state = GameState()
+        # 2. Add starting heroes, items, etc.
+        # self.game_state.heroes.append({"id": "hero_0", "name": "Starter Hero", ...})
+        # self.game_state.inventory["health_potion"] = 3
+        print("Stub: Initializing new game state...")
+        # For now, just re-initialize the existing stub GameState
+        self.game_state = GameState()
+
 
     def load_game(self):
         """
         Loads the game state from a file.
         (Responsibility might be in game_state.py, but controller triggers it)
         """
+        # Re-initialize GameState before loading in case there was old data
+        self.game_state = GameState()
         self.game_state.load_state()
         print("Stub: Loading game state...")
 

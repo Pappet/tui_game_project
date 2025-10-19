@@ -47,16 +47,16 @@ class MainMenuScreen(Screen):
         Handle button press events on the main menu.
         """
         if event.button.id == "btn_new_game":
-            print("Stub: 'New Game' pressed.")
+            # print("Stub: 'New Game' pressed.")
             # Future: Call controller to initialize a new game state
-            # self.app.controller.new_game()
-            # self.app.push_screen(BaseScreen()) # e.g., go to base
+            self.app.controller.new_game() # Call controller
+            self.app.push_screen(BaseScreen()) # e.g., go to base
 
         elif event.button.id == "btn_load_game":
-            print("Stub: 'Load Game' pressed.")
+            # print("Stub: 'Load Game' pressed.")
             # Future: Call controller to load game state
-            # self.app.controller.load_game()
-            # self.app.push_screen(BaseScreen()) # e.g., go to base
+            self.app.controller.load_game() # Call controller
+            self.app.push_screen(BaseScreen()) # e.g., go to base
 
         elif event.button.id == "btn_goto_base":
             # print("Stub: 'Go to Base' pressed.")
