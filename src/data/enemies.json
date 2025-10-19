@@ -1,0 +1,41 @@
+{
+  "goblin_encounter": {
+    "name": "Goblin Encounter",
+    "enemies": [
+      {
+        "id": "goblin_1",
+        "name": "Goblin",
+        "hp": 30,
+        "attack": 5,
+        "defense": 2
+      },
+      {
+        "id": "goblin_2",
+        "name": "Goblin",
+        "hp": 30,
+        "attack": 5,
+        "defense": 2
+      }
+    ],
+    "rewards": {
+      "xp": 50,
+      "gold": 25
+    }
+  },
+  "orc_scout": {
+    "name": "Orc Scout",
+    "enemies": [
+      {
+        "id": "orc_1",
+        "name": "Orc Scout",
+        "hp": 80,
+        "attack": 10,
+        "defense": 5
+      }
+    ],
+    "rewards": {
+      "xp": 75,
+      "gold": 40
+    }
+  }
+}

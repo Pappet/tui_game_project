@@ -1,0 +1,4050 @@
+
+## 🧭 NEXT STEP
+
+  - **Role:** BUILDER
+  - **Task:** Richte die initiale Projektstruktur (alle Verzeichnisse und leeren Dateien, einschließlich `__init__.py`, `main.py`, `game_controller.py`, `app.py`, `.json`-Dateien usw.) gemäß der `architecture.md` ein.
+
+-----
+
+## 📊 PROJECT PROGRESS
+
+Die Architektur (`architecture.md`) wurde vom DESIGN-Agenten geliefert und ist hiermit genehmigt. Der Status 'architecture' ist nun 'done'. Der nächste Schritt ist, dass der BUILDER-Agent die Projekt-Verzeichnisstruktur und die leeren Dateien gemäß dem Plan erstellt.
+
+-----
+
+## 🧱 CONSOLIDATED PROJECT STATE
+
+```json
+{
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Set up the initial project structure (all directories and empty files, including __init__.py, main.py, game_controller.py, app.py, .json files, etc.) according to architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo\! Hier ist der BUILDER.
+
+Meine Aufgabe ist es, die initiale Projektstruktur gemäß `architecture.md` aufzusetzen. Da ich angewiesen bin, nur eine Datei pro Antwort zu erstellen, beginne ich mit der Erstellung der Haupteinstiegsdatei: `tui_game/main.py`.
+
+Ich erstelle diese Datei mit einem minimalen Platzhalter, der ihre Rolle gemäß der Architektur (Starten der TUI) widerspiegelt. Die nächste Aufgabe im PROJECT STATE wird die Erstellung der nächsten Datei in der Struktur sein, um den Prozess fortzusetzen.
+
+REWRITE: tui\_game/main.py
+
+```python
+"""
+main.py
+
+Main entry point for the TUI game.
+Initializes and runs the Textual TUI application.
+"""
+
+def run_game():
+    """
+    Initializes and runs the main TUI application.
+    """
+    # This will be implemented fully once the tui.app module exists.
+    # from tui.app import GameApp
+    # app = GameApp()
+    # app.run()
+    
+    print("TUI Game Entry Point")
+    print("====================")
+    print("App is not yet implemented. Running main.py stub.")
+
+
+if __name__ == "__main__":
+    run_game()
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The file acts as a valid entry point (`if __name__ == "__main__":`). It correctly stubs the function designated by `architecture.md` (initializing the TUI app).
+2.  **Security:** 🟢 No security concerns in this stub file.
+3.  **Style:** 🟢 Clean, follows PEP8. Comments are in English as required.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/main.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/core/__init__.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei gemäß `architecture.md` ist die Initialisierungsdatei für das `core`-Paket.
+
+REWRITE: tui\_game/core/\_\_init\_\_.py
+
+```python
+"""
+Initializes the 'core' package.
+
+This package contains the central game controller and the persistent game state.
+"""
+# This file can remain empty.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Correctly serves as an `__init__.py` file to define the `core` directory as a Python package.
+2.  **Security:** 🟢 No security concerns.
+3.  **Style:** 🟢 Clean, standard Python practice. Comment is in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/core/__init__.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/core/game_controller.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich fahre mit dem Setup der Projektstruktur fort. Die nächste Datei ist der `game_controller`, der laut `architecture.md` als "Dirigent" des Spiels fungieren soll. Ich erstelle die Stub-Datei für diese Klasse.
+
+REWRITE: tui\_game/core/game\_controller.py
+
+```python
+"""
+game_controller.py
+
+The main "conductor" of the game.
+Manages game state transitions and coordinates between the TUI 
+and the game logic modules.
+"""
+
+# Import necessary modules (once they are created)
+# from core.game_state import GameState
+# from game_logic import hero_manager, item_manager, battle_system, base_manager
+from typing import Any # Using 'Any' for stubs
+
+class GameController:
+    """
+    Manages the game's core state and logic flow.
+    """
+    def __init__(self):
+        # The game_state will hold all persistent data (heroes, inventory, base)
+        # self.game_state: GameState = GameState()
+        self.game_state: Any = None # Placeholder
+        
+        # The controller will also manage the current high-level game state
+        # e.g., "MAIN_MENU", "BATTLE", "BASE_MANAGEMENT"
+        self.current_screen: str = "MAIN_MENU"
+        
+        print("GameController initialized (stub).")
+
+    def load_game(self):
+        """
+        Loads the game state from a file.
+        (Responsibility might be in game_state.py, but controller triggers it)
+        """
+        # self.game_state.load()
+        print("Stub: Loading game state...")
+
+    def save_game(self):
+        """
+        Saves the current game state to a file.
+        """
+        # self.game_state.save()
+        print("Stub: Saving game state...")
+
+    def switch_screen(self, new_screen: str):
+        """
+        Handles the logic for switching between major UI screens.
+        (e.g., from 'BASE' to 'BATTLE')
+        """
+        self.current_screen = new_screen
+        print(f"Stub: Switching screen to {new_screen}")
+
+    def equip_item(self, hero_id: Any, item_id: Any):
+        """
+        Coordinates the logic for equipping an item to a hero.
+        (Based on architecture.md data flow example)
+        """
+        print(f"Stub: Attempting to equip item {item_id} on hero {hero_id}...")
+        # --- Future Logic ---
+        # 1. Get game_state
+        # state = self.game_state
+        # 2. Call logic module
+        # success = item_manager.apply_item(state, hero_id, item_id)
+        # 3. Handle result
+        # if success:
+        #     print("Item equipped.")
+        # else:
+        #     print("Failed to equip item.")
+        # 4. (TUI will be notified via event or state watch)
+        pass
+
+# This file defines the class. It won't be run directly.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub file correctly defines the `GameController` class. The methods (`__init__`, `load_game`, `save_game`, `switch_screen`, `equip_item`) accurately reflect the "Dirigenten"-Rolle (conductor role) and the data flow example described in `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this stub file.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English and clearly explain the intended purpose of the class and methods.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/core/game_controller.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/core/game_state.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze das Setup der Projektstruktur fort. Die nächste Datei ist `game_state.py`, die laut `architecture.md` das "Gehirn" des Spiels sein und alle persistenten Daten enthalten soll. Ich erstelle die Stub-Datei für diese Klasse.
+
+REWRITE: tui\_game/core/game\_state.py
+
+```python
+"""
+game_state.py
+
+Holds all persistent data for the game.
+This includes hero rosters, inventory, and base progression.
+Also responsible for loading and saving the game state.
+"""
+
+from typing import List, Dict, Any
+
+class GameState:
+    """
+    Represents the complete persistent state of the game.
+    """
+    def __init__(self):
+        # Placeholder for the 5-hero team
+        self.heroes: List[Dict[str, Any]] = []
+        
+        # Placeholder for player's inventory
+        self.inventory: Dict[str, int] = {} # e.g., {"health_potion": 5}
+        
+        # Placeholder for base progression
+        self.base_status: Dict[str, int] = {} # e.g., {"barracks_level": 1}
+        
+        print("GameState initialized (stub).")
+
+    def load_state(self, filepath: str = "savegame.json"):
+        """
+        Loads the game state from a file (e.g., JSON).
+        """
+        # --- Future Logic ---
+        # try:
+        #     with open(filepath, 'r') as f:
+        #         data = json.load(f)
+        #         self.heroes = data.get("heroes", [])
+        #         self.inventory = data.get("inventory", {})
+        #         self.base_status = data.get("base_status", {})
+        #     print(f"Game state loaded from {filepath}")
+        # except FileNotFoundError:
+        #     print(f"No save file found at {filepath}. Starting new game.")
+        # except Exception as e:
+        #     print(f"Error loading game state: {e}")
+        print(f"Stub: Attempting to load state from {filepath}...")
+
+    def save_state(self, filepath: str = "savegame.json"):
+        """
+        Saves the current game state to a file (e.g., JSON).
+        """
+        # --- Future Logic ---
+        # data = {
+        #     "heroes": self.heroes,
+        #     "inventory": self.inventory,
+        #     "base_status": self.base_status
+        # }
+        # try:
+        #     with open(filepath, 'w') as f:
+        #         json.dump(data, f, indent=4)
+        #     print(f"Game state saved to {filepath}")
+        # except Exception as e:
+        #     print(f"Error saving game state: {e}")
+        print(f"Stub: Attempting to save state to {filepath}...")
+
+# This file defines the class. It won't be run directly.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub file correctly defines the `GameState` class. It includes placeholders for the core data elements (`heroes`, `inventory`, `base_status`) and the load/save methods (`load_state`, `save_state`), as specified in the `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this stub file. The commented-out file operations are standard; real implementation will need error handling (which is stubbed).
+3.  **Style:** 🟢 Code follows PEP8. Type hints are used. Comments and docstrings are in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/core/game_state.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/tui/__init__.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist die Initialisierungsdatei für das `tui`-Paket, wie in `architecture.md` definiert.
+
+REWRITE: tui\_game/tui/\_\_init\_\_.py
+
+```python
+"""
+Initializes the 'tui' package.
+
+This package contains all Textual-related UI components,
+including the main app entry point and all screen definitions.
+"""
+# This file can remain empty.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Korrekt als `__init__.py`-Datei, um das `tui`-Verzeichnis als Python-Paket zu definieren.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, Standard-Python-Praxis. Kommentar ist auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/__init__.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/tui/app.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze das Setup der Projektstruktur fort. Gemäß `architecture.md` ist die nächste Datei `tui/app.py`, die der Haupteinstiegspunkt für das Textual-Framework sein soll. Ich erstelle die Stub-Datei für diese Klasse.
+
+REWRITE: tui\_game/tui/app.py
+
+```python
+"""
+app.py
+
+The main Textual App class for the TUI game.
+This class is the entry point for the Textual framework and manages
+the different screens.
+"""
+
+from textual.app import App, ComposeResult
+
+# Import screens (once they are created)
+# from tui.screens.main_menu import MainMenuScreen
+# from tui.screens.hero_screen import HeroScreen
+# from tui.screens.base_screen import BaseScreen
+# from tui.screens.battle_screen import BattleScreen
+
+# Import the core logic
+# from core.game_controller import GameController
+
+class GameApp(App):
+    """
+    The main TUI application class.
+    """
+
+    # CSS_PATH = "main.tcss" # Future styling
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # self.controller = GameController() # Initialize the game controller
+        print("GameApp initialized (stub).")
+
+    def compose(self) -> ComposeResult:
+        """
+        Called by Textual to create the initial widget tree.
+        Initially, it might be empty as we push screens dynamically.
+        """
+        # We could yield global Header/Footer here
+        print("GameApp compose() called (stub).")
+        yield from [] # Yield nothing for now
+
+    def on_mount(self) -> None:
+        """
+        Called by Textual when the app is first mounted.
+        This is the correct place to push the initial screen.
+        """
+        # self.push_screen(MainMenuScreen())
+        print("Stub: App mounted. Pushing initial screen (e.g., MainMenuScreen).")
+
+# This file is not run directly.
+# It is imported by main.py which then calls .run()
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines a class `GameApp` that inherits from `textual.app.App`, matching the architecture's plan to use Textual. It includes the standard `compose` and `on_mount` methods. The `on_mount` stub correctly notes its responsibility for loading the initial screen.
+2.  **Security:** 🟢 No security concerns in this stub file.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English and clearly explain the intended purpose.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/app.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/tui/screens/__init__.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist die Initialisierungsdatei für das `tui/screens`-Paket, wie in `architecture.md` definiert.
+
+REWRITE: tui\_game/tui/screens/\_\_init\_\_.py
+
+```python
+"""
+Initializes the 'screens' sub-package.
+
+This package holds all the individual 'Screen' components
+used by the Textual app (e.g., MainMenu, HeroScreen, etc.).
+"""
+# This file can remain empty.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Korrekt als `__init__.py`-Datei, um das `screens`-Verzeichnis als Python-Paket zu definieren.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, Standard-Python-Praxis. Kommentar ist auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/__init__.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/tui/screens/base_screen.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `base_screen`, der für die TUI-Darstellung der Basis-Verbesserungen verantwortlich ist, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/tui/screens/base\_screen.py
+
+```python
+"""
+base_screen.py
+
+Implements the Textual Screen for the base management view.
+This UI allows the player to see their base status and interact
+with upgrades.
+"""
+
+from textual.screen import Screen
+from textual.widgets import Header, Footer, Static, Button
+from textual.containers import VerticalScroll
+
+# from core.game_controller import GameController
+
+class BaseScreen(Screen):
+    """
+    The screen for managing the player's base.
+    """
+    
+    def compose(self) -> "ComposeResult":
+        """
+        Create the child widgets for the base screen.
+        """
+        yield Header(name="My Base")
+        
+        with VerticalScroll(id="base_layout"):
+            yield Static("Base Management Screen (Stub)")
+            yield Static("Current Upgrades:")
+            # Future: Dynamically add widgets based on game_state.base_status
+            yield Static("[Barracks - Lvl 1]", classes="upgrade_item")
+            yield Static("[Forge - Lvl 0]", classes="upgrade_item")
+            
+            yield Button("Upgrade Barracks", id="btn_upgrade_barracks")
+            yield Button("Return to Main Menu", id="btn_main_menu")
+        
+        yield Footer()
+
+    def on_mount(self) -> None:
+        """
+        Called when the screen is mounted.
+        """
+        print("BaseScreen mounted (stub).")
+        # Future: Load current base status from controller/game_state
+        # self.app.controller.game_state.base_status
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """
+        Handle button press events.
+        """
+        if event.button.id == "btn_upgrade_barracks":
+            print("Stub: 'Upgrade Barracks' button pressed.")
+            # Future: Call controller to handle logic
+            # self.app.controller.upgrade_building("barracks")
+            
+        elif event.button.id == "btn_main_menu":
+            print("Stub: 'Return to Main Menu' button pressed.")
+            # Future: Pop screen or switch via controller
+            # self.app.pop_screen()
+            pass
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines a `BaseScreen` class inheriting from Textual's `Screen`. It includes a basic `compose` method to lay out stub widgets (Header, Footer, Static, Button) and event handlers (`on_mount`, `on_button_pressed`), aligning with its role in `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this TUI stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English. Uses standard Textual practices.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/base_screen.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/tui/screens/battle_screen.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `battle_screen`, der für die TUI-Darstellung des Kampfgeschehens verantwortlich ist, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/tui/screens/battle\_screen.py
+
+```python
+"""
+battle_screen.py
+
+Implements the Textual Screen for the combat view.
+This UI displays the hero team, the enemies, and the actions
+that can be taken during a battle.
+"""
+
+from textual.screen import Screen
+from textual.widgets import Header, Footer, Static, Button
+from textual.containers import Vertical, Horizontal
+
+# from core.game_controller import GameController
+
+class BattleScreen(Screen):
+    """
+    The screen for handling combat.
+    """
+    
+    def compose(self) -> "ComposeResult":
+        """
+        Create the child widgets for the battle screen.
+        """
+        yield Header(name="Battle!")
+        
+        with Horizontal(id="battle_layout"):
+            # Left side: Hero team
+            with Vertical(id="hero_pane"):
+                yield Static("Hero Team (Stub)")
+                yield Static("Hero 1: 100/100 HP")
+                yield Static("Hero 2: 100/100 HP")
+                yield Static("Hero 3: 100/100 HP")
+                yield Static("Hero 4: 100/100 HP")
+                yield Static("Hero 5: 100/100 HP")
+
+            # Right side: Enemy team
+            with Vertical(id="enemy_pane"):
+                yield Static("Enemies (Stub)")
+                yield Static("Enemy 1: 50/50 HP")
+                yield Static("Enemy 2: 50/50 HP")
+        
+        with Horizontal(id="action_bar"):
+            yield Button("Attack", id="btn_attack")
+            yield Button("Ability", id="btn_ability")
+            yield Button("Item", id="btn_item")
+            yield Button("Flee", id="btn_flee")
+            
+        yield Footer()
+
+    def on_mount(self) -> None:
+        """
+        Called when the screen is mounted.
+        """
+        print("BattleScreen mounted (stub).")
+        # Future: Load battle participants from controller/game_state
+        # self.app.controller.start_battle()
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """
+        Handle button press events for battle actions.
+        """
+        if event.button.id == "btn_attack":
+            print("Stub: 'Attack' button pressed.")
+            # Future: Call controller
+            # self.app.controller.execute_battle_turn("attack")
+            
+        elif event.button.id == "btn_flee":
+            print("Stub: 'Flee' button pressed.")
+            # Future: Call controller
+            # self.app.controller.execute_battle_turn("flee")
+            # self.app.pop_screen()
+            pass
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines a `BattleScreen` class inheriting from `Screen`. It includes a `compose` method to lay out a plausible stub combat UI (hero pane, enemy pane, action buttons) and event handlers, aligning with its role in `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this TUI stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English. Uses standard Textual containers (`Vertical`, `Horizontal`).
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/battle_screen.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/tui/screens/hero_screen.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `hero_screen`, der für die TUI-Darstellung der 5-köpfigen Heldengruppe und des Ausrüstungs-Managements verantwortlich ist, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/tui/screens/hero\_screen.py
+
+```python
+"""
+hero_screen.py
+
+Implements the Textual Screen for the hero management view.
+This UI displays the 5-hero team, allows viewing stats, 
+and equipping items.
+"""
+
+from textual.screen import Screen
+from textual.widgets import Header, Footer, Static, Button
+from textual.containers import Vertical, Horizontal
+
+# from core.game_controller import GameController
+
+class HeroScreen(Screen):
+    """
+    The screen for managing the player's 5-hero team.
+    """
+    
+    def compose(self) -> "ComposeResult":
+        """
+        Create the child widgets for the hero screen.
+        """
+        yield Header(name="Hero Management")
+        
+        with Horizontal(id="hero_team_layout"):
+            # Stub for 5 hero portraits/summaries
+            yield Static("Hero 1 [Selected]", id="hero_1")
+            yield Static("Hero 2", id="hero_2")
+            yield Static("Hero 3", id="hero_3")
+            yield Static("Hero 4", id="hero_4")
+            yield Static("Hero 5", id="hero_5")
+            
+        with Horizontal(id="hero_details_layout"):
+            # Left: Selected hero stats
+            with Vertical(id="hero_stats"):
+                yield Static("Selected Hero Stats (Stub)")
+                yield Static("Name: Hero 1")
+                yield Static("HP: 100/100")
+                yield Static("Attack: 10")
+                yield Static("Defense: 5")
+                yield Static("Weapon: [Empty]")
+                yield Static("Armor: [Empty]")
+            
+            # Right: Inventory for equipping
+            with Vertical(id="hero_inventory"):
+                yield Static("Inventory (Stub)")
+                yield Static("[Sword]")
+                yield Static("[Leather Armor]")
+                yield Button("Equip Selected Item", id="btn_equip")
+
+        yield Button("Return to Main Menu", id="btn_main_menu")
+        yield Footer()
+
+    def on_mount(self) -> None:
+        """
+        Called when the screen is mounted.
+        """
+        print("HeroScreen mounted (stub).")
+        # Future: Load hero data from controller/game_state
+        # self.heroes = self.app.controller.game_state.heroes
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """
+        Handle button press events.
+        """
+        if event.button.id == "btn_equip":
+            print("Stub: 'Equip' button pressed.")
+            # Future: Call controller (as per data flow example)
+            # hero_id = ...
+            # item_id = ...
+            # self.app.controller.equip_item(hero_id, item_id)
+            
+        elif event.button.id == "btn_main_menu":
+            print("Stub: 'Return to Main Menu' button pressed.")
+            # self.app.pop_screen()
+            pass
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines a `HeroScreen` class inheriting from `Screen`. It includes a `compose` method to lay out a plausible stub UI (hero list, stats, inventory) and event handlers, aligning with its role in `architecture.md` to manage the 5-hero team and equipping. The data flow example (`btn_equip`) is correctly referenced.
+2.  **Security:** 🟢 No security concerns in this TUI stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/hero_screen.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/tui/screens/main_menu.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `main_menu.py`, der als Startbildschirm der TUI-Anwendung dient, wie in `architecture.md` definiert.
+
+REWRITE: tui\_game/tui/screens/main\_menu.py
+
+```python
+"""
+main_menu.py
+
+Implements the Textual Screen for the main menu.
+This is the initial screen the player sees, providing options
+to start, load, or quit the game.
+"""
+
+from textual.screen import Screen
+from textual.widgets import Header, Footer, Static, Button
+from textual.containers import Vertical
+
+# Import other screens to switch to
+# from tui.screens.hero_screen import HeroScreen
+# from tui.screens.base_screen import BaseScreen
+# from tui.screens.battle_screen import BattleScreen
+
+class MainMenuScreen(Screen):
+    """
+    The main menu and starting screen for the game.
+    """
+    
+    def compose(self) -> "ComposeResult":
+        """
+        Create the child widgets for the main menu.
+        """
+        yield Header(name="Main Menu")
+        
+        with Vertical(id="menu_options"):
+            yield Static("TUI RPG GAME (Title Stub)", id="title")
+            yield Button("Start New Game", id="btn_new_game")
+            yield Button("Load Game", id="btn_load_game")
+            
+            # --- Quick navigation buttons for development ---
+            yield Button("Go to Base (Dev)", id="btn_goto_base")
+            yield Button("Go to Heroes (Dev)", id="btn_goto_heroes")
+            yield Button("Go to Battle (Dev)", id="btn_goto_battle")
+            # --- End Dev Buttons ---
+            
+            yield Button("Quit", id="btn_quit")
+        
+        yield Footer()
+
+    def on_button_pressed(self, event: Button.Pressed) -> None:
+        """
+        Handle button press events on the main menu.
+        """
+        if event.button.id == "btn_new_game":
+            print("Stub: 'New Game' pressed.")
+            # Future: Call controller to initialize a new game state
+            # self.app.controller.new_game()
+            # self.app.push_screen(BaseScreen()) # e.g., go to base
+            
+        elif event.button.id == "btn_load_game":
+            print("Stub: 'Load Game' pressed.")
+            # Future: Call controller to load game state
+            # self.app.controller.load_game()
+            # self.app.push_screen(BaseScreen()) # e.g., go to base
+            
+        elif event.button.id == "btn_goto_base":
+            print("Stub: 'Go to Base' pressed.")
+            # self.app.push_screen(BaseScreen())
+            
+        elif event.button.id == "btn_goto_heroes":
+            print("Stub: 'Go to Heroes' pressed.")
+            # self.app.push_screen(HeroScreen())
+            
+        elif event.button.id == "btn_goto_battle":
+            print("Stub: 'Go to Battle' pressed.")
+            # self.app.push_screen(BattleScreen())
+            
+        elif event.button.id == "btn_quit":
+            print("Stub: 'Quit' pressed.")
+            self.app.exit()
+
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines a `MainMenuScreen` class inheriting from `Screen`. It includes `compose` for layout and `on_button_pressed` for event handling, matching its role in `architecture.md`. It correctly implements the quit action (`self.app.exit()`).
+2.  **Security:** 🟢 No security concerns in this TUI stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English. (Dev buttons included for easier testing later).
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/tui/screens/main_menu.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/game_logic/__init__.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Wir beginnen nun mit dem `game_logic`-Paket. Die erste Datei ist die Initialisierungsdatei für dieses Paket, wie in `architecture.md` definiert.
+
+REWRITE: tui\_game/game\_logic/\_\_init\_\_.py
+
+```python
+"""
+Initializes the 'game_logic' package.
+
+This package contains all the "stateless" logic modules
+(the "rules" of the game). These modules operate on the
+game_state object but do not store state themselves.
+"""
+# This file can remain empty.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Korrekt als `__init__.py`-Datei, um das `game_logic`-Verzeichnis als Python-Paket zu definieren.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, Standard-Python-Praxis. Kommentar ist auf Englisch und beschreibt den Zweck des Pakets gemäß der Architektur.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/game_logic/__init__.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/game_logic/base_manager.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `base_manager` im `game_logic`-Paket. Diese Datei enthält die "dumme" Logik (stateless) für die Verwaltung von Basis-Upgrades, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/game\_logic/base\_manager.py
+
+```python
+"""
+base_manager.py
+
+Contains the game logic for managing the base progression.
+This module is stateless and operates on the game_state object
+passed to it by the game_controller.
+"""
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from core.game_state import GameState
+
+# Define costs or rules for upgrades
+UPGRADE_COSTS = {
+    "barracks": {
+        1: {"resource": "gold", "amount": 100},
+        2: {"resource": "gold", "amount": 500},
+    },
+    "forge": {
+        1: {"resource": "gold", "amount": 150},
+    }
+}
+
+def can_upgrade_building(game_state: "GameState", building: str) -> bool:
+    """
+    Checks if a building can be upgraded (e.g., checks resources, prerequisites).
+    """
+    print(f"Stub: Checking if '{building}' can be upgraded...")
+    # --- Future Logic ---
+    # current_level = game_state.base_status.get(building, 0)
+    # next_level = current_level + 1
+    # 
+    # if building not in UPGRADE_COSTS or next_level not in UPGRADE_COSTS[building]:
+    #     print("Stub: Building is max level or does not exist.")
+    #     return False
+    #
+    # cost = UPGRADE_COSTS[building][next_level]
+    # # Check if player has resources in game_state.inventory
+    # if game_state.inventory.get(cost["resource"], 0) >= cost["amount"]:
+    #     return True
+    #
+    # print("Stub: Not enough resources.")
+    return True # Stubbed to always allow
+
+def apply_upgrade(game_state: "GameState", building: str) -> bool:
+    """
+    Applies the upgrade to the game_state if possible.
+    Modifies game_state directly.
+    """
+    if not can_upgrade_building(game_state, building):
+        print(f"Stub: Upgrade check failed for '{building}'.")
+        return False
+        
+    print(f"Stub: Applying upgrade for '{building}'...")
+    # --- Future Logic ---
+    # 1. Deduct resources from game_state.inventory
+    # 2. Increment level in game_state.base_status
+    # 3. Apply effects (e.g., unlock items)
+    
+    # game_state.base_status[building] = game_state.base_status.get(building, 0) + 1
+    
+    return True
+
+def get_base_effects(game_state: "GameState") -> dict:
+    """
+    Calculates the total effects provided by the base upgrades.
+    (e.g., +5% hero HP, unlocks 'Steel Sword')
+    """
+    effects = {}
+    # --- Future Logic ---
+    # if game_state.base_status.get("forge", 0) >= 1:
+    #     effects["unlocked_items"] = ["steel_sword"]
+    
+    print("Stub: Calculating base effects...")
+    return effects
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines stateless functions (`can_upgrade_building`, `apply_upgrade`, `get_base_effects`) that take `game_state` as an argument. This precisely matches the "stateless logic module" concept from `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this logic stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English. Uses type hinting (`TYPE_CHECKING` block) to prevent circular dependencies, which is good practice.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/game_logic/base_manager.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/game_logic/battle_system.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist das `battle_system` im `game_logic`-Paket. Diese Datei enthält die "dumme" Logik (stateless) für die Berechnung der Kampfergebnisse, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/game\_logic/battle\_system.py
+
+```python
+"""
+battle_system.py
+
+Contains the game logic for handling combat mechanics.
+This module is stateless and calculates the outcome of battle
+actions based on the current game_state.
+"""
+
+from typing import TYPE_CHECKING, Dict, Any
+
+if TYPE_CHECKING:
+    from core.game_state import GameState
+
+def start_battle(game_state: "GameState", enemy_encounter_id: str) -> Dict[str, Any]:
+    """
+    Initializes a battle state (but doesn't store it here).
+    Returns the initial state of the battle participants.
+    """
+    print(f"Stub: Initializing battle with encounter '{enemy_encounter_id}'.")
+    
+    # --- Future Logic ---
+    # 1. Load enemy data from data/enemies.json
+    # 2. Get hero data from game_state.heroes
+    # 3. Create a temporary 'battle_state' dictionary
+    
+    battle_state = {
+        "heroes": [h for h in game_state.heroes if h.get("is_active", True)],
+        "enemies": [{"id": "enemy_1", "hp": 50}, {"id": "enemy_2", "hp": 50}],
+        "turn": 0
+    }
+    return battle_state
+
+def calculate_attack_outcome(attacker: Dict[str, Any], defender: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Calculates the result of one entity attacking another.
+    """
+    print(f"Stub: Calculating attack: {attacker.get('id')} vs {defender.get('id')}")
+    
+    # --- Future Logic ---
+    # damage = attacker.get("attack", 5) - defender.get("defense", 1)
+    # if damage < 0:
+    #     damage = 0
+    # defender_hp = defender.get("hp", 100) - damage
+    
+    result = {
+        "attacker_id": attacker.get("id"),
+        "defender_id": defender.get("id"),
+        "damage_dealt": 5, # Stub
+        "defender_hp_remaining": defender.get("hp", 50) - 5
+    }
+    return result
+
+def process_battle_turn(game_state: "GameState", battle_state: Dict[str, Any], player_action: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Processes one full turn of battle (player action + enemy actions)
+    and modifies the battle_state.
+    
+    Note: This modifies the passed 'battle_state' dictionary, not the
+    persistent 'game_state' (until the battle is over).
+    """
+    print(f"Stub: Processing turn {battle_state.get('turn')}.")
+    
+    # 1. Process Player Action
+    if player_action.get("type") == "attack":
+        # player_hero = battle_state["heroes"][player_action.get("actor_index", 0)]
+        # target_enemy = battle_state["enemies"][player_action.get("target_index", 0)]
+        # attack_result = calculate_attack_outcome(player_hero, target_enemy)
+        # target_enemy["hp"] = attack_result["defender_hp_remaining"]
+        print("Stub: Player attacks.")
+
+    # 2. Process Enemy Actions
+    # for enemy in battle_state["enemies"]:
+    #     if enemy["hp"] > 0:
+    #         # target_hero = ... (e.g., random hero)
+    #         # enemy_attack_result = calculate_attack_outcome(enemy, target_hero)
+    #         # target_hero["hp"] = enemy_attack_result["defender_hp_remaining"]
+    #         print(f"Stub: {enemy['id']} attacks.")
+
+    # 3. Check for battle end
+    # ...
+    
+    battle_state["turn"] += 1
+    return battle_state
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines stateless functions (`start_battle`, `calculate_attack_outcome`, `process_battle_turn`) that operate on a passed-in state object (`game_state` or a temporary `battle_state`). This aligns perfectly with the "stateless logic module" concept for calculating combat outcomes described in `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this logic stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English. Uses type hinting.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/game_logic/battle_system.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/game_logic/hero_manager.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `hero_manager` im `game_logic`-Paket. Diese Datei enthält die "dumme" Logik (stateless) für die Verwaltung von Helden-Stats und Level-Ups, wie in `architecture.md` beschrieben.
+
+REWRITE: tui\_game/game\_logic/hero\_manager.py
+
+```python
+"""
+hero_manager.py
+
+Contains the game logic for managing heroes, including stats,
+leveling, and status effects.
+This module is stateless and operates on the game_state object.
+"""
+
+from typing import TYPE_CHECKING, Dict, Any
+
+if TYPE_CHECKING:
+    from core.game_state import GameState
+
+# Experience points required for next level (example)
+XP_PER_LEVEL = {
+    1: 100,
+    2: 300,
+    3: 700,
+}
+
+def calculate_hero_stats(hero: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Calculates the final derived stats of a hero based on
+    base stats, level, and equipped items.
+    
+    This function *returns* the calculated stats, it does not
+    modify the hero directly unless intended.
+    """
+    print(f"Stub: Calculating stats for {hero.get('name', 'Unknown Hero')}")
+    
+    # --- Future Logic ---
+    # 1. Start with base stats
+    # final_stats = hero.get("base_stats", {}).copy()
+    #
+    # 2. Add stats from level
+    # level = hero.get("level", 1)
+    # final_stats["hp"] += level * 10
+    #
+    # 3. Add stats from equipment
+    # (This logic might be in item_manager.py, or looped here)
+    # for item_id in hero.get("equipment", {}).values():
+    #     item_stats = item_manager.get_item_stats(item_id)
+    #     for stat, value in item_stats.items():
+    #         final_stats[stat] = final_stats.get(stat, 0) + value
+            
+    # For now, just return a stub
+    final_stats = {
+        "hp": 100,
+        "attack": 10,
+        "defense": 5
+    }
+    
+    return final_stats
+
+
+def add_experience(hero: Dict[str, Any], xp_amount: int) -> bool:
+    """
+    Adds experience to a hero and checks for level-up.
+    Modifies the hero dictionary directly.
+    Returns True if the hero leveled up, False otherwise.
+    """
+    print(f"Stub: Adding {xp_amount} XP to {hero.get('name')}")
+    
+    # --- Future Logic ---
+    # hero["current_xp"] = hero.get("current_xp", 0) + xp_amount
+    # current_level = hero.get("level", 1)
+    # 
+    # required_xp = XP_PER_LEVEL.get(current_level)
+    # 
+    # if required_xp and hero["current_xp"] >= required_xp:
+    #     # Level up!
+    #     hero["level"] += 1
+    #     hero["current_xp"] -= required_xp
+    #     apply_level_up_stats(hero)
+    #     print(f"Stub: {hero.get('name')} leveled up to {hero['level']}!")
+    #     return True
+        
+    return False
+
+def apply_level_up_stats(hero: Dict[str, Any]):
+    """
+    Applies the base stat increases for a hero leveling up.
+    Modifies the hero dictionary directly.
+    """
+    print(f"Stub: Applying level-up stats to {hero.get('name')}")
+    # --- Future Logic ---
+    # hero["base_stats"]["hp"] += 10
+    # hero["base_stats"]["attack"] += 2
+    # hero["base_stats"]["defense"] += 1
+    pass
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines stateless functions (`calculate_hero_stats`, `add_experience`, `apply_level_up_stats`) that operate on a passed-in `hero` dictionary (which would come from `game_state`). This aligns with the "stateless logic module" concept and the specific responsibilities (stats, leveling) from `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this logic stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/game_logic/hero_manager.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/game_logic/item_manager.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist der `item_manager` im `game_logic`-Paket. Diese Datei enthält die "dumme" Logik (stateless) für die Verwaltung von Gegenständen und Ausrüstung, wie im `architecture.md` beschrieben, einschließlich des "Data Flow Example".
+
+REWRITE: tui\_game/game\_logic/item\_manager.py
+
+```python
+"""
+item_manager.py
+
+Contains the game logic for managing items, inventory, and equipment effects.
+This module is stateless and operates on the game_state object.
+"""
+
+from typing import TYPE_CHECKING, Dict, Any
+
+if TYPE_CHECKING:
+    from core.game_state import GameState
+
+# This data would eventually be loaded from data/items.json
+ITEM_DEFINITIONS = {
+    "sword": {"name": "Sword", "slot": "weapon", "stats": {"attack": 5}},
+    "leather_armor": {"name": "Leather Armor", "slot": "armor", "stats": {"defense": 3}},
+}
+
+def get_item_stats(item_id: str) -> Dict[str, Any]:
+    """
+    Retrieves the stat bonuses for a given item_id.
+    """
+    item = ITEM_DEFINITIONS.get(item_id)
+    if item:
+        return item.get("stats", {})
+    return {}
+
+def can_equip_item(game_state: "GameState", hero: Dict[str, Any], item_id: str) -> bool:
+    """
+    Checks if a hero can equip a specific item.
+    (e.g., checks class requirements, level requirements)
+    """
+    print(f"Stub: Checking if hero can equip {item_id}...")
+    
+    if item_id not in ITEM_DEFINITIONS:
+        print(f"Stub: Item {item_id} does not exist.")
+        return False
+        
+    # Stub: For now, all heroes can equip all items
+    return True
+
+def apply_item(game_state: "GameState", hero_id: Any, item_id: Any) -> bool:
+    """
+    Equips an item onto a hero, updating the game_state.
+    This function implements the logic described in the
+    architecture's "Data Flow Example".
+    
+    Modifies game_state directly.
+    """
+    print(f"Stub: 'apply_item' called for Hero {hero_id} and Item {item_id}.")
+    
+    # --- Future Logic ---
+    # 1. Find the hero in game_state.heroes
+    # hero = next((h for h in game_state.heroes if h["id"] == hero_id), None)
+    # if not hero:
+    #     print(f"Stub: Hero {hero_id} not found.")
+    #     return False
+    #
+    # 2. Check if item is in game_state.inventory
+    # if game_state.inventory.get(item_id, 0) <= 0:
+    #     print(f"Stub: Item {item_id} not in inventory.")
+    #     return False
+    #
+    # 3. Check if hero can equip it
+    # if not can_equip_item(game_state, hero, item_id):
+    #     print(f"Stub: Hero {hero_id} cannot equip {item_id}.")
+    #     return False
+    #
+    # 4. Perform the swap
+    # item_def = ITEM_DEFINITIONS[item_id]
+    # slot = item_def["slot"]
+    #
+    # # Unequip old item (if any)
+    # old_item_id = hero.get("equipment", {}).get(slot)
+    # if old_item_id:
+    #     game_state.inventory[old_item_id] = game_state.inventory.get(old_item_id, 0) + 1
+    #
+    # # Equip new item
+    # hero.get("equipment", {})[slot] = item_id
+    # game_state.inventory[item_id] -= 1
+    #
+    # print(f"Stub: Hero {hero_id} equipped {item_id}.")
+    return True
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly defines stateless functions (`get_item_stats`, `can_equip_item`, `apply_item`) that operate on `game_state`. The `apply_item` function specifically mirrors the logic described in the "Data Flow Example" from `architecture.md`.
+2.  **Security:** 🟢 No security concerns in this logic stub.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/game_logic/item_manager.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/data/items.json based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Wir beginnen nun mit dem `data`-Verzeichnis. Die erste Datei ist die `items.json`, die die Definitionen für Gegenstände enthalten wird, wie in `architecture.md` beschrieben. Ich erstelle sie als leere JSON-Datei (mit einem leeren Objekt als Platzhalter).
+
+REWRITE: tui\_game/data/items.json
+
+```json
+{
+  "sword_basic": {
+    "name": "Basic Sword",
+    "slot": "weapon",
+    "stats": {
+      "attack": 3
+    }
+  },
+  "leather_vest": {
+    "name": "Leather Vest",
+    "slot": "armor",
+    "stats": {
+      "defense": 2
+    }
+  }
+}
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Erstellt eine valide JSON-Datei. Ich habe sie mit einem leeren Objekt initialisiert, anstatt sie komplett leer zu lassen, was eine bessere Praxis für eine JSON-Datendatei ist. (Update: Ich habe stattdessen einige Beispiel-Stub-Einträge hinzugefügt, um ihre Struktur zu verdeutlichen, wie in `item_manager.py` angedeutet).
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Valides JSON.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/data/items.json",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/data/heroes.json based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist `heroes.json` im `data`-Verzeichnis. Sie wird die Definitionen für Helden-Archetypen enthalten, wie in `architecture.md` beschrieben. Ich erstelle sie mit einigen Platzhalter-Einträgen.
+
+REWRITE: tui\_game/data/heroes.json
+
+```json
+{
+  "warrior": {
+    "name": "Warrior",
+    "base_stats": {
+      "hp": 120,
+      "attack": 12,
+      "defense": 8
+    },
+    "level_up_gains": {
+      "hp": 12,
+      "attack": 3,
+      "defense": 2
+    }
+  },
+  "mage": {
+    "name": "Mage",
+    "base_stats": {
+      "hp": 80,
+      "attack": 5,
+      "defense": 3
+    },
+    "level_up_gains": {
+      "hp": 8,
+      "attack": 1,
+      "defense": 1
+    }
+  },
+  "ranger": {
+    "name": "Ranger",
+    "base_stats": {
+      "hp": 100,
+      "attack": 10,
+      "defense": 5
+    },
+    "level_up_gains": {
+      "hp": 10,
+      "attack": 2,
+      "defense": 1
+    }
+  }
+}
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Erstellt eine valide JSON-Datei mit Stub-Daten, die die in `architecture.md` beschriebene Rolle (Heldendefinitionen) widerspiegeln.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Valides JSON.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/data/heroes.json",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/data/enemies.json based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist `enemies.json` im `data`-Verzeichnis. Sie wird die Definitionen für Feindbegegnungen enthalten, wie in `architecture.md` beschrieben. Ich erstelle sie mit einigen Platzhalter-Einträgen.
+
+REWRITE: tui\_game/data/enemies.json
+
+```json
+{
+  "goblin_encounter": {
+    "name": "Goblin Encounter",
+    "enemies": [
+      {
+        "id": "goblin_1",
+        "name": "Goblin",
+        "hp": 30,
+        "attack": 5,
+        "defense": 2
+      },
+      {
+        "id": "goblin_2",
+        "name": "Goblin",
+        "hp": 30,
+        "attack": 5,
+        "defense": 2
+      }
+    ],
+    "rewards": {
+      "xp": 50,
+      "gold": 25
+    }
+  },
+  "orc_scout": {
+    "name": "Orc Scout",
+    "enemies": [
+      {
+        "id": "orc_1",
+        "name": "Orc Scout",
+        "hp": 80,
+        "attack": 10,
+        "defense": 5
+      }
+    ],
+    "rewards": {
+      "xp": 75,
+      "gold": 40
+    }
+  }
+}
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Erstellt eine valide JSON-Datei mit Stub-Daten, die die in `architecture.md` beschriebene Rolle (Definitionen für Kampfbegegnungen) widerspiegeln.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Valides JSON.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/data/enemies.json",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create empty file tui_game/utils/__init__.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Wir beginnen nun mit dem `utils`-Paket. Die erste Datei ist die Initialisierungsdatei für dieses Paket, wie in `architecture.md` definiert.
+
+REWRITE: tui\_game/utils/\_\_init\_\_.py
+
+```python
+"""
+Initializes the 'utils' package.
+
+This package holds utility functions and classes
+(e.g., logging) that are shared across the project.
+"""
+# This file can remain empty.
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 Korrekt als `__init__.py`-Datei, um das `utils`-Verzeichnis als Python-Paket zu definieren.
+2.  **Security:** 🟢 Keine Sicherheitsbedenken.
+3.  **Style:** 🟢 Sauber, Standard-Python-Praxis. Kommentar ist auf Englisch.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/utils/__init__.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "BUILDER",
+    "task": "Continue project structure setup: Create stub file tui_game/utils/logger.py based on architecture.md."
+  }
+}
+```
+
+=============================================================================================================================================================================================
+
+Hallo, hier ist der BUILDER.
+
+Ich setze die Erstellung der Projektstruktur fort. Die nächste Datei ist die `logger.py` im `utils`-Paket. Dies ist die letzte Datei, die in der `architecture.md` definiert ist.
+
+REWRITE: tui\_game/utils/logger.py
+
+```python
+"""
+logger.py
+
+Provides a shared logging utility for the application.
+"""
+
+import logging
+import sys
+
+def setup_logger() -> logging.Logger:
+    """
+    Configures and returns a root logger for the application.
+    """
+    
+    # This setup is basic. For Textual, logging to a file
+    # or the Textual dev console is often preferred over stdout.
+    
+    logger = logging.getLogger("tui_game")
+    logger.setLevel(logging.DEBUG) # Set to DEBUG for development
+    
+    # Avoid adding duplicate handlers if called multiple times
+    if not logger.handlers:
+        handler = logging.StreamHandler(sys.stdout)
+        formatter = logging.Formatter(
+            '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        )
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        
+    logger.info("Logger configured (stub).")
+    return logger
+
+# Initialize a default logger for easy import
+log = setup_logger()
+```
+
+## SELF-REVIEW
+
+1.  **Logic:** 🟢 The stub correctly sets up a basic Python logger using the standard `logging` module. This fulfills the utility role described in `architecture.md`. It includes a check to prevent duplicate handlers.
+2.  **Security:** 🟢 No security concerns.
+3.  **Style:** 🟢 Code follows PEP8. Comments and docstrings are in English.
+
+### REVIEW SUMMARY
+
+```json
+{
+  "status": "CLEAN",
+  "file_implemented": "tui_game/utils/logger.py",
+  "findings": []
+}
+```
+
+-----
+
+```json
+{
+  "agent": "BUILDER",
+  "version": "v0.2",
+  "files": [
+    {
+      "path": "architecture.md",
+      "status": "final",
+      "last_agent": "DESIGN",
+      "review_status": "approved",
+      "issues": []
+    },
+    {
+      "path": "tui_game/main.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_controller.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/core/game_state.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/app.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/base_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/battle_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/hero_screen.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/tui/screens/main_menu.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/base_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/battle_system.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/hero_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/game_logic/item_manager.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/items.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/heroes.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/data/enemies.json",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/__init__.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    },
+    {
+      "path": "tui_game/utils/logger.py",
+      "status": "awaiting_review",
+      "last_agent": "BUILDER",
+      "review_status": "CLEAN",
+      "issues": []
+    }
+  ],
+  "decisions": [
+    "Goal: TUI-based Python game",
+    "Use Python",
+    "Platform: TUI (Text User Interface)",
+    "Core mechanic: Manage a team of 5 heroes",
+    "Core mechanic: Equipping heroes",
+    "Core mechanic: Short battles",
+    "Core mechanic: Progression system tied to improving a base",
+    "Architecture: Modular (Core, TUI, Game Logic)",
+    "TUI Framework Suggestion: 'textual'"
+  ],
+  "completion_status": {
+    "architecture": "done",
+    "implementation": "in_progress",
+    "review": "not_started",
+    "documentation": "not_started"
+  },
+  "next_step": {
+    "agent": "META",
+    "task": "All files from the architecture plan have been created as stubs. Review the complete structure and pass control to the next phase (e.g., META review or first implementation task)."
+  }
+}
+```
+
+=============================================================================================================================================================================================

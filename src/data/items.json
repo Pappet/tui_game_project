@@ -1,0 +1,16 @@
+{
+  "sword_basic": {
+    "name": "Basic Sword",
+    "slot": "weapon",
+    "stats": {
+      "attack": 3
+    }
+  },
+  "leather_vest": {
+    "name": "Leather Vest",
+    "slot": "armor",
+    "stats": {
+      "defense": 2
+    }
+  }
+}

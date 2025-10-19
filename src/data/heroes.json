@@ -1,0 +1,41 @@
+{
+  "warrior": {
+    "name": "Warrior",
+    "base_stats": {
+      "hp": 120,
+      "attack": 12,
+      "defense": 8
+    },
+    "level_up_gains": {
+      "hp": 12,
+      "attack": 3,
+      "defense": 2
+    }
+  },
+  "mage": {
+    "name": "Mage",
+    "base_stats": {
+      "hp": 80,
+      "attack": 5,
+      "defense": 3
+    },
+    "level_up_gains": {
+      "hp": 8,
+      "attack": 1,
+      "defense": 1
+    }
+  },
+  "ranger": {
+    "name": "Ranger",
+    "base_stats": {
+      "hp": 100,
+      "attack": 10,
+      "defense": 5
+    },
+    "level_up_gains": {
+      "hp": 10,
+      "attack": 2,
+      "defense": 1
+    }
+  }
+}
